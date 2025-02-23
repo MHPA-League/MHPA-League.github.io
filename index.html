@@ -1,82 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MHPA ProAM League</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MHPA ProAM League</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>MHPA</h1>
-        <button id="admin-login">Admin Login</button>
-    </header>
+  <header>
+    <h1>MHPA</h1>
+    <button id="admin-login">Admin</button>
+  </header>
 
-    <main>
-        <!-- Standings Section -->
-        <section class="standings">
-            <h2>Standings</h2>
-            <div id="standings-container"></div>
-            <div id="admin-standings" class="admin-controls hidden">
-                <input id="teamName" placeholder="Team Name">
-                <input id="wins" placeholder="Wins" type="number">
-                <input id="losses" placeholder="Losses" type="number">
-                <button onclick="updateTeam()">Update Team</button>
-            </div>
-        </section>
-
-        <!-- Playoff Bracket Section -->
-        <section class="playoffs">
-            <h2>Playoff Bracket</h2>
-            <div id="playoff-container"></div>
-            <div id="admin-playoffs" class="admin-controls hidden">
-                <input id="playoffTeam" placeholder="Team Name">
-                <input id="seed" placeholder="Seed (1-5)" type="number">
-                <button onclick="updatePlayoff()">Add to Playoffs</button>
-            </div>
-        </section>
-
-        <!-- Awards Section -->
-        <section class="awards">
-            <h2>Award Projections</h2>
-            <div id="awards-container"></div>
-            <div id="admin-awards" class="admin-controls hidden">
-                <select id="awardType">
-                    <option value="mvp">MVP</option>
-                    <option value="rookie">Rookie of the Year</option>
-                    <option value="defensive">Defensive Player</option>
-                    <option value="offensive">Offensive Player</option>
-                </select>
-                <input id="awardPlayer" placeholder="Player Name">
-                <button onclick="updateAward()">Update Award</button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="socials">
-            <a href="#" class="social-icon">X</a>
-            <a href="#" class="social-icon">Twitch</a>
-            <a href="#" class="social-icon">Discord</a>
+  <main>
+    <section class="standings">
+      <h2>Standings</h2>
+      
+      <!-- Conference 1: Under Appreciated -->
+      <div class="conference" id="under-appreciated">
+        <h3>Under Appreciated</h3>
+        
+        <div class="division" id="young-money">
+          <h4>Young Money</h4>
+          <ul class="team-list">
+            <li>Gods Country <span>0-0</span></li>
+            <li>Money in the Grave <span>0-0</span></li>
+            <li>NightCrawlers <span>0-0</span></li>
+            <li>Legends <span>0-0</span></li>
+          </ul>
         </div>
-    </footer>
+        
+        <div class="division" id="astroworld">
+          <h4>AstroWorld</h4>
+          <ul class="team-list">
+            <li>Butterfly Effect <span>0-0</span></li>
+            <li>Underground Kings <span>0-0</span></li>
+            <li>JumpMen <span>0-0</span></li>
+            <li>Antidote <span>0-0</span></li>
+          </ul>
+        </div>
+      </div>
 
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-    <script>
-        // Replace with your Firebase config from Console > Project Settings
-        const firebaseConfig = {
-            apiKey: "your-api-key",
-            authDomain: "mhpa-league.firebaseapp.com",
-            projectId: "mhpa-league",
-            storageBucket: "mhpa-league.appspot.com",
-            messagingSenderId: "your-sender-id",
-            appId: "your-app-id"
-        };
-        firebase.initializeApp(firebaseConfig);
-    </script>
-    <script src="script.js"></script>
+      <!-- Conference 2: Overly Hated -->
+      <div class="conference" id="overly-hated">
+        <h3>Overly Hated</h3>
+        
+        <div class="division" id="twilight-zone">
+          <h4>Twilight Zone</h4>
+          <ul class="team-list">
+            <li>Bandits <span>0-0</span></li>
+            <li>No Role Models <span>0-0</span></li>
+            <li>Lucid Dreams <span>0-0</span></li>
+            <li>Fire Squad <span>0-0</span></li>
+          </ul>
+        </div>
+        
+        <div class="division" id="dreamville">
+          <h4>DreamVille</h4>
+          <ul class="team-list">
+            <li>Armed and Dangerous <span>0-0</span></li>
+            <li>Stealth Mode <span>0-0</span></li>
+            <li>Doomsday <span>0-0</span></li>
+            <li>Nobody’s Perfect <span>0-0</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other sections (Playoffs, Awards) remain as placeholders -->
+    <section class="playoffs">
+      <h2>Playoff Bracket</h2>
+      <div class="bracket">
+        <!-- To be filled with top 5 teams from each conference later -->
+      </div>
+    </section>
+
+    <section class="awards">
+      <h2>Award Projections</h2>
+      <div class="award-grid">
+        <div class="award-card">MVP</div>
+        <div class="award-card">Rookie of the Year</div>
+        <div class="award-card">Defensive Player</div>
+        <div class="award-card">Offensive Player</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <a href="#" class="social-icon">X</a>
+      <a href="#" class="social-icon">Twitch</a>
+      <a href="#" class="social-icon">Discord</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
