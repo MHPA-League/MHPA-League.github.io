@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHPA ProAM League</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MHPA</h1>
+        <button id="admin-login">Admin Login</button>
+    </header>
+
+    <main>
+        <!-- Standings Section -->
+        <section class="standings">
+            <h2>Standings</h2>
+            <div id="standings-container"></div>
+            <div id="admin-standings" class="admin-controls hidden">
+                <input id="teamName" placeholder="Team Name">
+                <input id="wins" placeholder="Wins" type="number">
+                <input id="losses" placeholder="Losses" type="number">
+                <button onclick="updateTeam()">Update Team</button>
+            </div>
+        </section>
+
+        <!-- Playoff Bracket Section -->
+        <section class="playoffs">
+            <h2>Playoff Bracket</h2>
+            <div id="playoff-container"></div>
+            <div id="admin-playoffs" class="admin-controls hidden">
+                <input id="playoffTeam" placeholder="Team Name">
+                <input id="seed" placeholder="Seed (1-5)" type="number">
+                <button onclick="updatePlayoff()">Add to Playoffs</button>
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="awards">
+            <h2>Award Projections</h2>
+            <div id="awards-container"></div>
+            <div id="admin-awards" class="admin-controls hidden">
+                <select id="awardType">
+                    <option value="mvp">MVP</option>
+                    <option value="rookie">Rookie of the Year</option>
+                    <option value="defensive">Defensive Player</option>
+                    <option value="offensive">Offensive Player</option>
+                </select>
+                <input id="awardPlayer" placeholder="Player Name">
+                <button onclick="updateAward()">Update Award</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="#" class="social-icon">X</a>
+            <a href="#" class="social-icon">Twitch</a>
+            <a href="#" class="social-icon">Discord</a>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script>
+        // Replace with your Firebase config from Console > Project Settings
+        const firebaseConfig = {
+            apiKey: "your-api-key",
+            authDomain: "mhpa-league.firebaseapp.com",
+            projectId: "mhpa-league",
+            storageBucket: "mhpa-league.appspot.com",
+            messagingSenderId: "your-sender-id",
+            appId: "your-app-id"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
