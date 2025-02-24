@@ -1,8 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => {
-      section.addEventListener('click', () => {
-          section.classList.toggle('expanded');
-      });
+// Expandable divisions
+document.querySelectorAll('[data-expandable]').forEach(division => {
+  division.addEventListener('click', () => {
+      division.classList.toggle('expanded');
   });
 });

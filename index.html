@@ -5,74 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MHPA Season 4</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>MHPA Season 4</h1>
     </header>
+
     <main>
-        <section id="standings">
+        <!-- Standings Section -->
+        <section class="standings">
             <h2>Standings</h2>
             <div class="conference">
-                <h3>Conference 1 - Under Appreciated</h3>
-                <div class="division">
-                    <h4>Division A: Young Money</h4>
-                    <ul>
-                        <li>Gods Country (0-0)</li>
-                        <li>Money in the Grave (0-0)</li>
-                        <li>NightCrawlers (0-0)</li>
-                        <li>Legends (0-0)</li>
-                    </ul>
+                <h3 class="conf-title">Under Appreciated</h3>
+                <div class="division" data-expandable>
+                    <h4>Young Money</h4>
+                    <div class="content">
+                        <table>
+                            <thead><tr><th>Team</th><th>W</th><th>L</th><th>PCT</th></tr></thead>
+                            <tbody>
+                                <tr><td>Gods Country</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>Money in the Grave</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>NightCrawlers</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>Legends</td><td>0</td><td>0</td><td>.000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="division">
-                    <h4>Division B: AstroWorld</h4>
-                    <ul>
-                        <li>Butterfly Effect (0-0)</li>
-                        <li>Underground Kings (0-0)</li>
-                        <li>JumpMen (0-0)</li>
-                        <li>Antidote (0-0)</li>
-                    </ul>
+                <div class="division" data-expandable>
+                    <h4>AstroWorld</h4>
+                    <div class="content">
+                        <table>
+                            <thead><tr><th>Team</th><th>W</th><th>L</th><th>PCT</th></tr></thead>
+                            <tbody>
+                                <tr><td>Butterfly Effect</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>Underground Kings</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>JumpMen</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>Antidote</td><td>0</td><td>0</td><td>.000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <div class="conference">
-                <h3>Conference 2 - Overly Hated</h3>
-                <div class="division">
-                    <h4>Division A: Twilight Zone</h4>
-                    <ul>
-                        <li>Bandits (0-0)</li>
-                        <li>No Role Models (0-0)</li>
-                        <li>Lucid Dreams (0-0)</li>
-                        <li>Fire Squad (0-0)</li>
-                    </ul>
+                <h3 class="conf-title">Overly Hated</h3>
+                <div class="division" data-expandable>
+                    <h4>Twilight Zone</h4>
+                    <div class="content">
+                        <table>
+                            <thead><tr><th>Team</th><th>W</th><th>L</th><th>PCT</th></tr></thead>
+                            <tbody>
+                                <tr><td>Bandits</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>No Role Models</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>Lucid Dreams</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>Fire Squad</td><td>0</td><td>0</td><td>.000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="division">
-                    <h4>Division B: DreamVille</h4>
-                    <ul>
-                        <li>Armed and Dangerous (0-0)</li>
-                        <li>Stealth Mode (0-0)</li>
-                        <li>Doomsday (0-0)</li>
-                        <li>Nobody’s Perfect (0-0)</li>
-                    </ul>
+                <div class="division" data-expandable>
+                    <h4>DreamVille</h4>
+                    <div class="content">
+                        <table>
+                            <thead><tr><th>Team</th><th>W</th><th>L</th><th>PCT</th></tr></thead>
+                            <tbody>
+                                <tr><td>Armed and Dangerous</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>Stealth Mode</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>Doomsday</td><td>0</td><td>0</td><td>.000</td></tr>
+                                <tr><td>Nobody’s Perfect</td><td>0</td><td>0</td><td>.000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="playoff-bracket">
+
+        <!-- Playoff Bracket Section -->
+        <section class="playoffs">
             <h2>Playoff Bracket</h2>
-            <!-- Playoff bracket content here -->
+            <div class="bracket-container">
+                <div class="conference-bracket">
+                    <h3>Under Appreciated</h3>
+                    <div class="play-in">4 vs 5: <span>[TBD]</span></div>
+                    <div class="round">1 vs [Play-In]: <span>[TBD]</span></div>
+                    <div class="round">2 vs 3: <span>[TBD]</span></div>
+                    <div class="semis">Semis: <span>[TBD]</span></div>
+                </div>
+                <div class="conference-bracket">
+                    <h3>Overly Hated</h3>
+                    <div class="play-in">4 vs 5: <span>[TBD]</span></div>
+                    <div class="round">1 vs [Play-In]: <span>[TBD]</span></div>
+                    <div class="round">2 vs 3: <span>[TBD]</span></div>
+                    <div class="semis">Semis: <span>[TBD]</span></div>
+                </div>
+                <div class="finals">MHPA Finals: <span>[TBD] vs [TBD]</span></div>
+            </div>
         </section>
-        <section id="award-projections">
+
+        <!-- Award Projections Section -->
+        <section class="awards">
             <h2>Award Projections</h2>
-            <ul>
-                <li>MVP</li>
-                <li>Rookie of the Year</li>
-                <li>Defensive Player of the Year</li>
-                <li>Offensive Player of the Year</li>
-            </ul>
+            <div class="award-item" style="--award-color: #7B2CBF;">
+                <h4>MVP</h4>
+                <p>[TBD] - [Team TBD]</p>
+            </div>
+            <div class="award-item" style="--award-color: #00CED1;">
+                <h4>Rookie of the Year</h4>
+                <p>[TBD] - [Team TBD]</p>
+            </div>
+            <div class="award-item" style="--award-color: #C0C0C0;">
+                <h4>Defensive Player of the Year</h4>
+                <p>[TBD] - [Team TBD]</p>
+            </div>
+            <div class="award-item" style="--award-color: #FFD700;">
+                <h4>Offensive Player of the Year</h4>
+                <p>[TBD] - [Team TBD]</p>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>Follow us on <a href="https://twitter.com">X</a>, <a href="https://twitch.tv">Twitch</a>, and <a href="https://discord.com">Discord</a></p>
+        <p>Join the MHPA Community!</p>
+        <div class="socials">
+            <a href="#" target="_blank">X</a>
+            <a href="#" target="_blank">Twitch</a>
+            <a href="#" target="_blank">Discord</a>
+        </div>
     </footer>
-    <script src="scripts.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
