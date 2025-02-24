@@ -6,11 +6,12 @@
 }
 
 body {
-  background-color: #2E2E2E;
+  background-color: #252525; /* Darkened background */
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
-  padding-bottom: 100px; /* Space for footer */
+  position: relative;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -18,14 +19,14 @@ header {
   text-align: center;
   padding: 30px;
   background: #1E1E1E;
-  border-bottom: 3px solid #7B2CBF;
+  border-bottom: 3px solid #800080; /* Purple */
 }
 
 h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.8em;
   color: #FFFFFF;
-  text-shadow: 0 0 5px #7B2CBF;
+  text-shadow: 0 0 5px #800080;
 }
 
 /* Main Sections */
@@ -42,7 +43,7 @@ h2 {
   color: #FFFFFF;
   text-align: center;
   margin-bottom: 30px;
-  border-bottom: 2px solid #7B2CBF;
+  border-bottom: 2px solid #800080; /* Purple */
   padding-bottom: 10px;
 }
 
@@ -60,28 +61,28 @@ h2 {
   color: #C0C0C0;
   text-align: center;
   margin: 20px 0;
-  background: #3A3A3A;
+  background: #333333;
   padding: 10px;
   border-radius: 5px;
 }
 
 .division {
-  background: #3A3A3A;
+  background: #333333;
   padding: 20px;
   margin: 15px 0;
-  border: 1px solid #7B2CBF;
+  border: 1px solid #800080; /* Purple */
   border-radius: 5px;
   transition: box-shadow 0.3s;
   cursor: pointer;
 }
 
 .division:hover {
-  box-shadow: 0 0 10px rgba(123, 44, 191, 0.5);
+  box-shadow: 0 0 10px rgba(128, 0, 128, 0.5); /* Purple shadow */
 }
 
 .division h4 {
   font-size: 1.4em;
-  color: #00CED1;
+  color: #1E90FF; /* Power Blue */
   margin-bottom: 10px;
 }
 
@@ -109,17 +110,17 @@ th, td {
 }
 
 th {
-  background: #7B2CBF;
+  background: #800080; /* Purple */
   color: #FFFFFF;
   text-transform: uppercase;
 }
 
 tr:nth-child(even) {
-  background: #333333;
+  background: #303030;
 }
 
 tr:hover {
-  background: rgba(123, 44, 191, 0.1);
+  background: rgba(128, 0, 128, 0.1); /* Purple hover */
 }
 
 /* Playoff Bracket */
@@ -137,9 +138,9 @@ tr:hover {
 .conference-bracket {
   flex: 1;
   min-width: 280px;
-  background: #3A3A3A;
+  background: #333333;
   padding: 20px;
-  border: 2px solid #00CED1;
+  border: 2px solid #1E90FF; /* Power Blue */
   border-radius: 5px;
 }
 
@@ -154,19 +155,19 @@ tr:hover {
   margin: 15px 0;
   padding: 12px;
   background: #2A2A2A;
-  border: 1px solid #FFD700;
+  border: 1px solid #FFFF00; /* Yellow */
   border-radius: 5px;
 }
 
 .play-in span, .round span, .semis span, .finals span {
-  color: #FFD700;
+  color: #FFFF00; /* Yellow */
 }
 
 .finals {
   width: 100%;
   text-align: center;
   padding: 20px;
-  background: #7B2CBF;
+  background: #800080; /* Purple */
   margin-top: 20px;
   border-radius: 5px;
   font-size: 1.4em;
@@ -178,13 +179,14 @@ tr:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px; /* Space for fixed footer */
+  position: relative;
 }
 
 .award-item {
   flex: 1;
   min-width: 220px;
-  background: #3A3A3A;
+  background: #333333;
   padding: 20px;
   border: 2px solid var(--award-color);
   border-radius: 5px;
@@ -211,8 +213,12 @@ footer {
   text-align: center;
   padding: 20px;
   background: #1E1E1E;
-  border-top: 3px solid #7B2CBF;
+  border-top: 3px solid #800080; /* Purple */
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
 }
 
 footer p {
@@ -228,7 +234,7 @@ footer p {
 }
 
 .socials a:hover {
-  color: #7B2CBF;
+  color: #1E90FF; /* Power Blue */
 }
 
 /* Responsive Design */
