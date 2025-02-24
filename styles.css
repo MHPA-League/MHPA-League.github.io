@@ -10,111 +10,77 @@ body {
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
-  position: relative;
-}
-
-/* Creative Background Animation */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(123, 44, 191, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
-  animation: pulse 10s infinite;
-  z-index: -1;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
+  padding-bottom: 100px; /* Space for footer */
 }
 
 /* Header */
 header {
   text-align: center;
   padding: 30px;
-  background: linear-gradient(45deg, #1E1E1E, #3A3A3A);
-  border-bottom: 4px solid #7B2CBF;
-  box-shadow: 0 0 15px rgba(123, 44, 191, 0.5);
+  background: #1E1E1E;
+  border-bottom: 3px solid #7B2CBF;
 }
 
 h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3em;
+  font-size: 2.8em;
   color: #FFFFFF;
-  text-shadow: 0 0 10px #7B2CBF, 0 0 20px #7B2CBF;
-  animation: flicker 2s infinite alternate;
-}
-
-@keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
+  text-shadow: 0 0 5px #7B2CBF;
 }
 
 /* Main Sections */
 main {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
 h2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 2.5em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
   color: #FFFFFF;
   text-align: center;
   margin-bottom: 30px;
-  border-bottom: 3px dashed #7B2CBF;
+  border-bottom: 2px solid #7B2CBF;
   padding-bottom: 10px;
-  text-shadow: 0 0 5px #00CED1;
 }
 
 /* Standings */
 .standings {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .conference {
   margin: 20px 0;
-  position: relative;
 }
 
 .conf-title {
-  font-size: 2em;
+  font-size: 1.8em;
   color: #C0C0C0;
   text-align: center;
   margin: 20px 0;
-  transform: skew(-10deg);
   background: #3A3A3A;
   padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 206, 209, 0.3);
+  border-radius: 5px;
 }
 
 .division {
   background: #3A3A3A;
   padding: 20px;
   margin: 15px 0;
-  border: 2px solid #7B2CBF;
-  border-radius: 10px;
-  transform: rotate(-2deg);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #7B2CBF;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
   cursor: pointer;
 }
 
-.division:nth-child(even) {
-  transform: rotate(2deg);
-}
-
 .division:hover {
-  transform: scale(1.05) rotate(0deg);
-  box-shadow: 0 0 20px rgba(123, 44, 191, 0.7);
+  box-shadow: 0 0 10px rgba(123, 44, 191, 0.5);
 }
 
 .division h4 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: #00CED1;
   margin-bottom: 10px;
 }
@@ -139,22 +105,26 @@ table {
 th, td {
   padding: 12px;
   text-align: left;
-  border-bottom: 1px dashed #7B2CBF;
+  border-bottom: 1px solid #C0C0C0;
 }
 
 th {
-  background: linear-gradient(to right, #7B2CBF, #00CED1);
+  background: #7B2CBF;
   color: #FFFFFF;
   text-transform: uppercase;
 }
 
+tr:nth-child(even) {
+  background: #333333;
+}
+
 tr:hover {
-  background: rgba(123, 44, 191, 0.2);
+  background: rgba(123, 44, 191, 0.1);
 }
 
 /* Playoff Bracket */
 .playoffs {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .bracket-container {
@@ -162,7 +132,6 @@ tr:hover {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  position: relative;
 }
 
 .conference-bracket {
@@ -170,23 +139,12 @@ tr:hover {
   min-width: 280px;
   background: #3A3A3A;
   padding: 20px;
-  border: 3px dashed #00CED1;
-  border-radius: 15px;
-  transform: translateY(-10px);
-  animation: float 3s infinite ease-in-out;
-}
-
-.conference-bracket:nth-child(2) {
-  animation-delay: 1.5s;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(-10px); }
-  50% { transform: translateY(10px); }
+  border: 2px solid #00CED1;
+  border-radius: 5px;
 }
 
 .conference-bracket h3 {
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: #C0C0C0;
   text-align: center;
   margin-bottom: 15px;
@@ -196,9 +154,8 @@ tr:hover {
   margin: 15px 0;
   padding: 12px;
   background: #2A2A2A;
-  border: 2px solid #FFD700;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  border: 1px solid #FFD700;
+  border-radius: 5px;
 }
 
 .play-in span, .round span, .semis span, .finals span {
@@ -208,20 +165,20 @@ tr:hover {
 .finals {
   width: 100%;
   text-align: center;
-  padding: 25px;
-  background: linear-gradient(45deg, #7B2CBF, #00CED1);
-  margin-top: 30px;
-  border-radius: 15px;
-  font-size: 1.5em;
-  box-shadow: 0 0 20px rgba(123, 44, 191, 0.7);
+  padding: 20px;
+  background: #7B2CBF;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 1.4em;
 }
 
-/* Awards */
+/* Award Projections */
 .awards {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 20px;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .award-item {
@@ -229,23 +186,17 @@ tr:hover {
   min-width: 220px;
   background: #3A3A3A;
   padding: 20px;
-  border: 3px solid var(--award-color);
-  border-radius: 50% 20% / 20% 50%;
-  transform: rotate(-5deg);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.award-item:nth-child(even) {
-  transform: rotate(5deg);
+  border: 2px solid var(--award-color);
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
 }
 
 .award-item:hover {
-  transform: scale(1.1) rotate(0deg);
-  box-shadow: 0 0 15px var(--award-color);
+  box-shadow: 0 0 10px var(--award-color);
 }
 
 .award-item h4 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: var(--award-color);
   text-align: center;
   margin-bottom: 10px;
@@ -260,11 +211,8 @@ footer {
   text-align: center;
   padding: 20px;
   background: #1E1E1E;
-  border-top: 4px solid #7B2CBF;
-  position: fixed;
-  bottom: 0;
+  border-top: 3px solid #7B2CBF;
   width: 100%;
-  z-index: 10;
 }
 
 footer p {
@@ -275,13 +223,12 @@ footer p {
   color: #FFFFFF;
   margin: 0 20px;
   text-decoration: none;
-  font-size: 1.5em;
-  transition: color 0.3s, transform 0.3s;
+  font-size: 1.4em;
+  transition: color 0.3s;
 }
 
 .socials a:hover {
   color: #7B2CBF;
-  transform: scale(1.2);
 }
 
 /* Responsive Design */
