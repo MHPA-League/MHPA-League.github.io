@@ -1,12 +1,8 @@
-document.querySelectorAll('.division h4').forEach(header => {
-  header.addEventListener('click', () => {
-    const division = header.parentElement;
-    division.classList.toggle('expanded');
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('section');
+  sections.forEach(section => {
+      section.addEventListener('click', () => {
+          section.classList.toggle('expanded');
+      });
   });
-});
-
-// Admin login placeholder
-document.getElementById('admin-login').addEventListener('click', () => {
-  alert('Admin Login: Enter credentials to edit standings.');
-  // Replace with modal and backend logic
 });
